@@ -1,3 +1,4 @@
+import Images from './components/Images';
 import './App.css';
 
 function App() {
@@ -10,8 +11,7 @@ function App() {
               <h2 className="subtitle is-6">React</h2>
               <h1 className="title is-1">Unsplash Infinite Scroll</h1>
             </div>
-
-            <div className="images"></div>
+            <Images />
           </div>
         </div>
       </div>
