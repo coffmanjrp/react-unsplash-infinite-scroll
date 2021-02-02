@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import Image from './Image';
 
 const Images = () => {
   const [images, setImages] = useState([]);
