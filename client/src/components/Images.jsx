@@ -8,7 +8,13 @@ const Images = () => {
   const [start, setStart] = useState(1);
   const [count, setCount] = useState(30);
 
-  const fetchImages = () => {};
+  const fetchImages = () => {
+    setStart(start + count);
+
+    axios
+      .get(`/api/photos?count=${count}&start=${start}`)
+      .then((res) => setImages(images.concat(res.data)));
+  };
 
   useEffect(() => {
     axios
@@ -25,8 +31,8 @@ const Images = () => {
         hasMore={true}
         loader={<h4>Loading...</h4>}
       >
-        {images.map((image) => (
-          <Image key={image.id} image={image} />
+        {images.map((image, index) => (
+          <Image key={`${index}_${image.id}`} image={image} />
         ))}
       </InfiniteScroll>
     </div>
