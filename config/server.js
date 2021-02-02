@@ -1,5 +1,7 @@
+require('dotenv').config();
+
 module.exports = {
-  APPLICATION_ID: precess.env.APPLICATION_ID || 'REPLACE',
-  SECRET: process.env.SECRET || 'REPLACE',
-  CALLBACK_URL: process.env.CALLBACK_URL || 'http://localhost:3000',
+  APPLICATION_ID: process.env.APPLICATION_ID,
+  SECRET: process.env.SECRET,
+  CALLBACK_URL: process.env.CALLBACK_URL,
 };
