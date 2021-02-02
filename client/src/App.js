@@ -2,8 +2,19 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>App</h1>
+    <div id="root">
+      <div className="hero is-fullheight is-bold is-info">
+        <div className="hero-body">
+          <div className="container">
+            <div className="header content">
+              <h2 className="subtitle is-6">React</h2>
+              <h1 className="title is-1">Unsplash Infinite Scroll</h1>
+            </div>
+
+            <div className="images"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
